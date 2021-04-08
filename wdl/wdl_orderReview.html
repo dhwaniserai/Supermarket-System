@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body><br><br></br>
+  <h1 style="font-size:xx-large; text-align: center;font-family: serif;"><b><u>SHOPPING CART</u></b></h1></br>
+
+<div class="shopping-cart">
+
+  
+    
+    
+ 
+</br>
+  <div class="product">
+    
+      <img class="product-image" src="https://www.ipuro.in/uploads/ipurofoods/products/hamam-799479_s.jpg">
+<br><br><br>
+    <div class="product-details">
+      <div class="product-title" style="color: blue"><b>Hamam Neem Tulsi & Aloe Vera Soap, 150 g</b></div>
+      <p class="product-description">Product Dimensions : 19.6 x 6.3 x 13.2 cm; 1.2 Kilograms
+Date First Available : 16 June 2020
+Manufacturer : Hindustan Unilever Ltd</p>
+    </div>
+    <div class="product-price" id="item1">12.99</div>
+    <div class="product-quantity" >
+      <input type="number" id="myText1" value="1" min="0" onchange="myFunction(this.value)">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product" onclick="myFunction1r()">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price"id="demo1" >25.98</div>
+  </div><br><br><br><br><br><br><br><br><br><br>
+ <div class="product">
+    
+      <img class="product-image" src="https://m.media-amazon.com/images/S/aplus-media/sota/95d868ed-6acd-4efc-990f-ee892ff3118d.__CR0,0,970,600_PT0_SX970_V1___.jpg">
+<br><br><br>
+    <div class="product-details">
+      <div class="product-title" style="color: blue"><b>Amul Butter - Pasteurised, 500g</b></div>
+      <p class="product-description">Specialty  Suitable_for_vegetarians
+Weight  500 Grams
+Volume  0.5 MillilitresIngredient Type  Vegetarian
+Brand Amul
+Item Package Quantity 1
+Manufacturer  Amul</p>
+    </div>
+    <div class="product-price" id="item2">218.00</div>
+    <div class="product-quantity" >
+      <input type="number" id="myText2" value="1" min="0" onchange="myFunction2(this.value)">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product" onclick="myFunction2r()">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price"id="demo2" >218.00</div>
+  </div><br>
+
+
+
+<script>
+function myFunction(val) {
+   alert("The input value has changed. The new value is: " + val);
+  var x = document.getElementById("item1").textContent;
+         var x= x*val;
+          document.getElementById("demo1").innerHTML = x;  
+ 
+
+}
+function myFunction2(val) {
+   alert("The input value has changed. The new value is: " + val);
+  var x = document.getElementById("item2").textContent;
+         var x= x*val;
+          document.getElementById("demo2").innerHTML = x;  
+ 
+
+}
+function myFunction1r(){
+  alert("One Item will be deleted");
+  var x = document.getElementById("myText1").value;
+  var y=document.getElementById("item1").textContent;
+   document.getElementById("myText1").value=x-1;
+  document.getElementById("demo1").innerHTML = (x-1)*y; 
+}
+function myFunction2r(){
+  alert("One Item will be deleted");
+  var x = document.getElementById("myText2").value;
+  var y=document.getElementById("item2").textContent;
+   document.getElementById("myText2").value=x-1;
+  document.getElementById("demo2").innerHTML = (x-1)*y; 
+}
+</script>
+</body>
+<style type="text/css">
+ html,body {  
+           background: url('http://all4desktop.com/data_images/original/4236532-background-images.jpg');
+  font-family: 'Roboto Condensed', sans-serif;
+          
+height: 100%;
+
+                   }
+.product-image { float: left; width: 20%; }
+.product-details { float: left; width: 37%;padding-left: 2px; }
+.product-price { float: left; width: 8%; }
+.product-quantity { float: left; width: 15%; }
+.product-removal { float: left; width: 5%; }
+.product-line-price { float: left; width: 10%;text-align: center;  }
+.shopping-cart{
+  background-color: white;
+  height: 80%;
+  width: 100%;
+  padding: 5px;
+}
+.remove-product {
+  align-items: right;
+    padding: 2px;
+    font-size: 15px;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 5px;
+}
+ .product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: 'Rs';
+}
+</style>
+
+</html>
